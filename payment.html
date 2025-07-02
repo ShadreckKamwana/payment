@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #3a8dde, #a7d9f5); /* Blue to Light Blue */
+      background: linear-gradient(135deg, #3a8dde, #a7d9f5);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -17,23 +17,24 @@
     }
 
     .message {
-      background-color: #f0f8ff; /* Light Blue-White Box */
+      background-color: #f0f8ff;
       padding: 40px 60px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       text-align: center;
       animation: pop 0.6s ease-out;
+      display: none; /* Hide initially */
     }
 
     .message h1 {
-      color: #1b4db1; /* Deep Blue Text */
+      color: #1b4db1;
       font-size: 32px;
       margin: 0;
     }
 
     .checkmark {
       font-size: 50px;
-      color: #1b4db1; /* Matching Blue Checkmark */
+      color: #1b4db1;
       margin-bottom: 20px;
       animation: bounce 1s infinite alternate;
     }
@@ -60,9 +61,16 @@
   </style>
 </head>
 <body>
-  <div class="message">
+  <div class="message" id="successMessage">
     <div class="checkmark">✅</div>
     <h1>Paid Successfully</h1>
   </div>
+
+  <script>
+    // Wait 5 seconds, then show the message
+    setTimeout(() => {
+      document.getElementById('successMessage').style.display = 'block';
+    }, 5000);
+  </script>
 </body>
 </html>
