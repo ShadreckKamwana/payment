@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Success</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #3a8dde, #a7d9f5); /* Blue to Light Blue */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .message {
+      background-color: #f0f8ff; /* Light Blue-White Box */
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: pop 0.6s ease-out;
+    }
+
+    .message h1 {
+      color: #1b4db1; /* Deep Blue Text */
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .checkmark {
+      font-size: 50px;
+      color: #1b4db1; /* Matching Blue Checkmark */
+      margin-bottom: 20px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <div class="checkmark">✅</div>
+    <h1>Paid Successfully</h1>
+  </div>
+</body>
+</html>
